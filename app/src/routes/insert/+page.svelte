@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import {
 		Table,
 		TableBody,
@@ -8,8 +8,11 @@
 		TableHeadCell,
 		Button,
 		Input,
-		Label
+		Label,
+		Select
 	} from 'flowbite-svelte';
+
+	import { intervalsStore } from '../../stores/interval-store';
 
 	let rowsCount = 1;
 
@@ -28,8 +31,10 @@
 		<Input id="insert-interval" type="text" />
 	</div>
 	<div class="mb-4">
-		<Label for="insert-context" class="block mb-2">Kontekst</Label>
-		<Input id="insert-context" type="text" />
+		<Label>
+			Kontekst
+			<Select items={$intervalsStore} />
+		</Label>
 	</div>
 
 	<div class="mt-20">
@@ -59,7 +64,7 @@
 				{/each}
 			</TableBody>
 		</Table>
-		<div class="flex justify-between">
+		<div class="mt-6 flex justify-between">
 			<Button class="ml-4" color="light" on:click={addRow}>Dodaj wiersz</Button>
 			<Button class="mr-4" color="green">Zapisz</Button>
 		</div>
