@@ -2,8 +2,6 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import '../app.postcss';
 
-	export const ssr = false;
-
 	import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query';
 	const queryClient = new QueryClient();
 </script>

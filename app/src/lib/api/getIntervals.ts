@@ -3,7 +3,7 @@ import axios from "axios";
 const uri = 'https://jsonplaceholder.typicode.com/users';
 
 export const getIntervals = async () => {
-    const response = await axios.get(uri);
+    const response = await axios.get<Interval[]>(uri);
     return response.data;
 };
 
