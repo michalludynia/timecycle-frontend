@@ -12,7 +12,12 @@
 		Select
 	} from 'flowbite-svelte';
 
-	import { intervalsStore } from '../../stores/interval-store';
+	import { getIntervals } from '$lib/api/getIntervals';
+	import { useQuery } from '@sveltestack/svelte-query';
+
+	const intervals = useQuery('intervals', getIntervals);
+	//TODO type it somehow and map to items
+	//TODO try one more time if it is possible to move it outside
 
 	let rowsCount = 1;
 
@@ -33,7 +38,7 @@
 	<div class="mb-4">
 		<Label>
 			Kontekst
-			<Select items={$intervalsStore} />
+			<Select items={$intervals.data} />
 		</Label>
 	</div>
 
