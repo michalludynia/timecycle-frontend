@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { GET } from '$lib/api/contexts';
+	import { GET } from '$lib/api/contextsActions';
 	import { useQuery } from '@sveltestack/svelte-query';
 	import { Label, Select } from 'flowbite-svelte';
 

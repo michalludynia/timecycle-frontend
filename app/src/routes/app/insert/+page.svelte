@@ -12,11 +12,12 @@
 		Label
 	} from 'flowbite-svelte';
 	import { createForm } from 'felte';
-	import { POST } from '$lib/api/contexts';
+	import { POST } from '$lib/api/contextsActions';
 	import * as zod from 'zod';
 	import { validator } from '@felte/validator-zod';
 	import { reporter } from '@felte/reporter-svelte';
 	import ValidationMessage from '$lib/components/forms/ValidationMessage.svelte';
+	import { useMutation } from '@sveltestack/svelte-query';
 
 	let rowsCount = 1;
 
@@ -39,10 +40,12 @@
 			)
 			.nonempty()
 	});
+
+	const mutation = useMutation('contexts', POST);
+
 	const { form } = createForm<zod.infer<typeof schema>>({
 		onSubmit: (values) => {
-			console.log(values);
-			POST(values);
+			$mutation.mutate(values);
 		},
 		extend: [validator({ schema }), reporter]
 	});

@@ -1,14 +1,15 @@
-import axios from "axios";
+import { axiosClient as axios } from "./axiosClient";
 
-const uri = 'https://jsonplaceholder.typicode.com/users';
+const endpoint = '/users';
 
 const GET = async () => {
-    const response = await axios.get<Context[]>(uri);
+    const response = await axios.get<Context[]>(endpoint);
     return response.data;
 };
 
 const POST = async (data: RecordBody) => {
-    const response = await axios.post(uri, data);
+    const response = await axios.post(endpoint, data);
+    return response;
 };
 
 export { GET, POST };

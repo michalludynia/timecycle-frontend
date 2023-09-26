@@ -3,13 +3,13 @@
 	import { page } from '$app/stores';
 
 	const tabs = [
-		{ path: '/insert', label: 'Wprowadź' },
-		{ path: '/edit', label: 'Edytuj' },
-		{ path: '/days-off', label: 'Dni wolne' },
-		{ path: '/settings', label: 'Ustawienia' },
-		{ path: '/reports', label: 'Raporty' },
-		{ path: '/my-account', label: 'Moje konto' },
-		{ path: '/logout', label: 'Wyloguj' }
+		{ path: '/app/insert', label: 'Wprowadź' },
+		{ path: '/app/edit', label: 'Edytuj' },
+		{ path: '/app/days-off', label: 'Dni wolne' },
+		{ path: '/app/settings', label: 'Ustawienia' },
+		{ path: '/app/reports', label: 'Raporty' },
+		{ path: '/app/my-account', label: 'Moje konto' },
+		{ path: '/app/logout', label: 'Wyloguj' }
 	];
 
 	$: activeUrl = $page.url.pathname;
