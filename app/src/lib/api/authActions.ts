@@ -1,8 +1,13 @@
+import type { AxiosAuthRefreshRequestConfig } from "axios-auth-refresh";
 import { axiosClient as axios } from "./axiosClient";
 
 
 const authorize = async (credentials: CredentialsRequest): Promise<AuthorizeReponse> => {
-    const response = await axios.post<AuthorizeReponse>('/auth/token', credentials);
+    const response = await axios.post<AuthorizeReponse>(
+        '/auth/token',
+        credentials,
+        { skipAuthRefresh: true } as AxiosAuthRefreshRequestConfig
+    );
     return response.data;
 };
 
