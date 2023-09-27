@@ -22,6 +22,7 @@
 		"eslint-plugin-svelte": "^2.30.0",
 		"flowbite": "^1.8.1",
 		"flowbite-svelte": "^0.44.17",
+		"flowbite-svelte-icons": "^0.4.4",
 		"postcss": "^8.4.24",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.0",
@@ -42,6 +43,7 @@
 		"axios-auth-refresh": "^3.3.6",
 		"felte": "^1.2.12",
 		"svelte-local-storage-store": "^0.6.0",
+		"svelte-transition": "^0.0.10",
 		"zod": "^3.22.2"
 	}
 }

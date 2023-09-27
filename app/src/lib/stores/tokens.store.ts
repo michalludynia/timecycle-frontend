@@ -18,9 +18,16 @@ tokenStore.subscribe(value => {
 const getRefreshToken = () => currentRefreshToken
 const getToken = () => currentToken;
 
+const tokensAreAvailable = () => !!(currentToken && currentRefreshToken);
+
 const setTokens = (newToken: string, newRefreshToken: string) => {
     refreshTokenStore.set(newRefreshToken);
     tokenStore.set(newToken);
 };
 
-export { getRefreshToken, setTokens, getToken };
+const clearTokens = () => {
+    refreshTokenStore.set("");
+    tokenStore.set("");
+}
+
+export { getRefreshToken, setTokens, getToken, tokensAreAvailable, clearTokens };

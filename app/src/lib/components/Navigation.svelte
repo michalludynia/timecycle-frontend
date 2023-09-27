@@ -4,11 +4,6 @@
 
 	const tabs = [
 		{ path: '/app/insert', label: 'Wprowadź' },
-		{ path: '/app/edit', label: 'Edytuj' },
-		{ path: '/app/days-off', label: 'Dni wolne' },
-		{ path: '/app/settings', label: 'Ustawienia' },
-		{ path: '/app/reports', label: 'Raporty' },
-		{ path: '/app/my-account', label: 'Moje konto' },
 		{ path: '/app/logout', label: 'Wyloguj' }
 	];
 

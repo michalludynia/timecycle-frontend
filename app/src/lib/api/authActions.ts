@@ -18,7 +18,7 @@ const getUser = async (): Promise<MeResponse> => {
 
 export { authorize, getUser };
 
-interface CredentialsRequest {
+export interface CredentialsRequest {
     username: string;
     password: string;
 }
