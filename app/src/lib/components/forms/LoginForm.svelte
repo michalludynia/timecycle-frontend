@@ -28,7 +28,7 @@
 		<div class="grid grid-rows-3 gap-6">
 			<div>
 				<Label for="username" class="block">Login</Label>
-				<Input id="dupa" name="username" type="text" required />
+				<Input id="username" name="username" type="text" required />
 				<ValidationMessage forInput="username" />
 			</div>
 			<div>
